@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LaundryLoop — Coming Soon</title>
+    <meta name="description" content="LaundryLoop: zone-based laundry pickup & scheduling. Launching soon." />
+
+    <!-- Social preview -->
+    <meta property="og:title" content="LaundryLoop — Coming Soon" />
+    <meta property="og:description" content="Zone-based laundry pickup & scheduling. Launching soon." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laundryloop-landing.pages.dev/" />
+    <meta name="twitter:card" content="summary" />
+
+    <style>
+      :root { color-scheme: light dark; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: Canvas;
+        color: CanvasText;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 720px;
+        padding: 32px;
+      }
+      .card {
+        background: Canvas;
+        border: 1px solid rgba(0,0,0,.12);
+        border-radius: 16px;
+        box-shadow: 0 8px 28px rgba(0,0,0,.08);
+        padding: 28px 24px;
+      }
+      h1 {
+        margin: 0 0 8px 0;
+        letter-spacing: .2px;
+        font-size: clamp(28px, 4vw, 36px);
+      }
+      p { margin: 8px 0 0 0; line-height: 1.5; }
+      a {
+        color: inherit;
+        font-weight: 600;
+        text-underline-offset: 3px;
+      }
+      .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,.14);
+        font-size: 12px;
+        opacity: .9;
+      }
+      footer { margin-top: 16px; font-size: 12px; opacity: .7; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card" role="region" aria-label="Coming Soon">
+        <h1>🧺 LaundryLoop</h1>
+        <p>Zone-based laundry pickup & scheduling — <strong>launching soon</strong>.</p>
+        <div class="row">
+          <span class="badge">Secure · HTTPS</span>
+          <span class="badge">Email ready</span>
+        </div>
+        <p style="margin-top:14px">
+          Questions? <a href="mailto:hello@laundryloop.org">hello@laundryloop.org</a>
+        </p>
+      </section>
+      <footer>© <span id="y"></span> LaundryLoop</footer>
+    </main>
+
+    <script>
+      // Sets current year in footer
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
